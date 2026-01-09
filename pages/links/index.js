@@ -51,20 +51,15 @@ const Links = () => {
 
                 {/* Links */}
                 <div className={styles.linksContainer}>
-                    {links.map((link, index) => {
-                        // Calculate delay class
-                        const delayClass = index < 5 ? styles[`fadeInDelay${index + 3}`] : styles.fadeInDelay5;
-
-                        return (
-                            <div
-                                key={link.label}
-                                className={delayClass}
-                                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-                            >
-                                <LinkButton href={link.href} icon={link.icon} label={link.label} />
-                            </div>
-                        );
-                    })}
+                    {links.map((link, index) => (
+                        <div
+                            key={link.label}
+                            className={styles.linkItem}
+                            style={{ animationDelay: `${0.3 + index * 0.15}s` }}
+                        >
+                            <LinkButton href={link.href} icon={link.icon} label={link.label} />
+                        </div>
+                    ))}
                 </div>
 
                 {/* Footer */}

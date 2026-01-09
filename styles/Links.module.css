@@ -104,6 +104,11 @@
   animation: float 6s ease-in-out infinite;
 }
 
+.linkItem {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
 /* Cosmic Background */
 .cosmicContainer {
   position: fixed;
